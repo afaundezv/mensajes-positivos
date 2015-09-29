@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html ng-app="goodVibesBro">
+    <head>
+        <title>MENSAJES POSITIVOS | Para darle alegr&iacutea al alma</title>
+        <link rel="shortcut icon" href="http://www.iconj.com/icon.php?pid=7n6xiguf6h" type="image/x-icon" /> 
+        <link href="web/css/bootstrap.css" rel='stylesheet' type='text/css' />
+        <link href="web/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="web/css/style.css" rel='stylesheet' type='text/css' />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body  ng-controller="mainController">
+        <div class="header">
+             <div class="header-bottom" id="home">
+               <h1>{{msj.message}}</h1>
+               <h2>{{msj.author}}</h2>
+             </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <ul class="footer-nav"> 
+                    <li><a data-toggle="modal" href="#newMessage">comparte tu mensaje</a></li> 
+                </ul>
+            </div>
+        </footer>
+        <div class="modal fade" id="newMessage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">New Good Vibes</h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="message-text" class="control-label">Message:</label>
+                    <textarea class="form-control" ng-model="newMessage.message"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="control-label">Author:</label>
+                    <input type="text" class="form-control" ng-model="newMessage.author">
+                  </div>
+                  <div class="form-group">
+                    <label for="image-name" class="control-label">Image:</label>
+                    <input type="text" class="form-control" ng-model="newMessage.image">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" ng-click=createMessage() data-dismiss="modal">Send message</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="web/js/jquery-1.9.1.min.js"></script>
+        <script src="web/js/bootstrap.js"></script>
+        <script src="web/js/angular.min.js"></script>
+        <script src="web/js/controller/main.js"></script>
+    </body>
+</html>
