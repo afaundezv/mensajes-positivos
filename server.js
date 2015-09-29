@@ -15,7 +15,7 @@ app.get("/", function(req, res){
 });
 
 app.get('/api/getMessage', function(req, res) {
-   logic.MessageLogic.getMessage(res);
+   logic.MessageLogic.getRandomMessage(res);
 });
 
 app.post('/api/addMessage', function(req, res) { 
