@@ -2,8 +2,10 @@ var express = require('express'),
     path = require('path'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser'),
+    http = require('http'),
     logic = require('./my_modules/logic/MensajeLogic.js');
 
+//mongoose.connect('mongodb://localhost:27017/mensajes-positivos');
 
 var app = express();
 app.use(express.static(__dirname));
